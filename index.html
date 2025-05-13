@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Google Sign-In - Srinidhi Sivakumar</title>
+    <style>
+        /* Global Styles */
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f4f7f6;
+            color: #333;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            flex-direction: column;
+        }
+
+        h1 {
+            color: #0A3D7E;
+            font-size: 2.5em;
+            margin-bottom: 20px;
+        }
+
+        /* Google Sign-In Button Styles */
+        #g_id_onload {
+            margin: 20px;
+        }
+
+        /* Profile Information */
+        #profile {
+            margin-top: 20px;
+            text-align: center;
+        }
+
+        #profile h2 {
+            font-size: 1.5em;
+            margin-bottom: 10px;
+        }
+
+        #profile img {
+            border-radius: 50%;
+            margin-top: 10px;
+        }
+
+        /* Sign-Out Button Styles */
+        #signOutButton {
+            padding: 10px 20px;
+            background-color: #FF4F4F;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            display: block;
+            margin-top: 20px;
+        }
+
+        #signOutButton:hover {
+            background-color: #e04f4f;
+        }
+
+        /* Styling for the Google Sign-In button */
+        .g-signin2 {
+            width: 250px;
+            margin-top: 20px;
+        }
+    </style>
+    <script src="https://accounts.google.com/gsi/client" async defer></script>
+</head>
+<body>
+    <h1>Google Sign-In Example - Srinidhi Sivakumar</h1>
+
+    <!-- Google Sign-In button -->
+    <div id="g_id_onload"
+         data-client_id="639906976943-80ptbnuqr8qejlpkmmt697mfa9ks6quc.apps.googleusercontent.com" 
+         data-login_uri="http://127.0.0.1:8080/"         
+         data-callback="handleCredentialResponse"
+         data-theme="outline">
+    </div>
+
+    <!-- Profile Information Section -->
+    <div id="profile"></div>
+
+    <!-- Sign-Out Button (Initially hidden) -->
+    <button id="signOutButton" onclick="signOut()" style="display:none;">Sign Out</button>
+
+    <script src="script.js"></script>
+</body>
+</html>
